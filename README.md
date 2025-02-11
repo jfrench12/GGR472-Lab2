@@ -2,9 +2,9 @@
  This repository contains code for a website for GGR472 Lab 2, including a visualization of cycling sharing stations and the cycling network in Toronto using two different data sources, a GeoJSON file and vector tile as well as a custom MapBox style as required.
  
 ## Key repository contents 
-- `static/stations.geojson`: A geoJSON data file which provides point data for all Toronto bike share station locations, names, address, and capacity.  
+- `static/cycling-network.geojson`: A geoJSON data file which provides point data for all Toronto bike share station locations, names, address, and capacity.  
 - `index.html`: A HTML file to render the visualization.
 - `about.html`: A HTML file to render the about page.
 - `static/styles.css`: A CSS file to manage some of the layout/style, including the legend, colours of visualizations, etc. 
-- `static/clicker.js`: A JavaScript file for the visualization/map. 
+- `static/map-script.js`: A JavaScript file for the visualization/map. 
  
