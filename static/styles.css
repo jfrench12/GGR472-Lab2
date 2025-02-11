@@ -1,0 +1,63 @@
+/* Global css variables for the map elements so we can use them in the code and the legend */
+:root {
+    --bike-station: #00FF00 ; /* Bike station dot colour */
+    --cycling-network: #00c1ff  ; /* Cycling network line colour */
+}
+
+/* Main page container with picture of bikes in the background */
+.bike-bg {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 58px); /* Full page minus navbar height */
+}
+
+.ggr-card {
+    padding: 0.5rem 1rem 0.25rem;
+}
+
+/* Container for mapbox map */
+.map-container {
+    /* Must set width/height for mapbox to show */
+    min-width: 80vw;
+    min-height: 83vh;
+}
+
+/* Legend container, on the top right of the screen */
+.legend-container {
+    position: fixed !important; /* Important to override bootstrap style */
+    top: 25%;
+    right: 10%;
+    opacity: 0.9;
+}
+
+/* For cycling network legend use a line with the colour of the lines on the map */
+.legend-cycling-network {
+  display: inline-block; /* Ensure the width/height are used */
+  width: 16px;
+  height: 2px;
+  background-color: var(--cycling-network);
+  margin-right: 4px;
+  margin-bottom: 4px; /* Vertically center */
+}
+
+/* For bike station legend use a dot with colour of the points on the map */
+.legend-bike-station {
+  display: inline-block; /* Ensure the width/height are used */
+  width: 8px;
+  height: 8px;
+  background-color: var(--bike-station);
+  margin-right: 4px;
+  margin-bottom: 2px; /* Vertically center */
+  border-radius: 50%; /* Make it a circle */
+}
+
+/* Override mapbox popup style to match boostrap colours */
+.mapboxgl-popup-content {
+    background-color: var(--bs-dark) !important;
+}
+.mapboxgl-popup-tip {
+    /* Arrow below popup is actually border */
+    border-top-color: var(--bs-dark) !important;
+}
