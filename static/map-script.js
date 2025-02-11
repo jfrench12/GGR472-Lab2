@@ -12,7 +12,7 @@ map.on("load", () => {
 	// Cycling network needs to be added first so it's under the station points
 	map.addSource("cycling-network", {
 		type: "geojson",
-		data: "update url after uploading",
+		data: "https://jfrench12.github.io/GGR472-Lab2/static/cycling-network.geojson",
 	});
 	// Add the line layer to visualize the cycling network
 	map.addLayer({
